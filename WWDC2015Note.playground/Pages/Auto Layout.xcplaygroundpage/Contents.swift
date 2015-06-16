@@ -1,25 +1,25 @@
-//: Playground - noun: a place where people can play
-
 import UIKit
 import XCPlayground
-
-var leadGuide = UILayoutGuide()
-var trailGuide = UILayoutGuide()
 
 var viewOut = UIView(frame: CGRectMake(0, 0, 200, 200))
 viewOut.translatesAutoresizingMaskIntoConstraints = false
 viewOut.backgroundColor = UIColor.redColor()
 
-viewOut.addLayoutGuide(leadGuide)
-viewOut.addLayoutGuide(trailGuide)
 
-var viewIn = UIView()//(frame: CGRectMake(0, 0, 10, 10))
+var viewIn = UIView(frame: CGRectMake(0, 0, 10, 10))
 viewIn.translatesAutoresizingMaskIntoConstraints = false
 viewIn.backgroundColor = UIColor.purpleColor()
 
-var vc = UIViewController()
-vc.view.addSubview(viewOut)
-XCPShowView("VC", view: vc.view)
+var leadGuide = UILayoutGuide()
+viewOut.addLayoutGuide(leadGuide)
+
+var trailGuide = UILayoutGuide()
+viewOut.addLayoutGuide(trailGuide)
+
+
+//var vc = UIViewController()
+//vc.view.addSubview(viewOut)
+//XCPShowView("VC", view: vc.view)
 
 viewOut.addSubview(viewIn)
 
@@ -38,7 +38,6 @@ cs1.append(c3)
 cs1.append(c4)
 cs1.append(c5)
 
-
 var cc1 = viewIn.trailingAnchor.constraintEqualToAnchor(viewOut.trailingAnchor, constant: -10)
 var cc2 = viewIn.bottomAnchor.constraintEqualToAnchor(viewOut.bottomAnchor, constant: -10)
 var cc3 = viewIn.leadingAnchor.constraintEqualToAnchor(viewOut.leadingAnchor, constant: 10)
@@ -46,29 +45,29 @@ var cc4 = viewIn.topAnchor.constraintEqualToAnchor(viewOut.topAnchor, constant: 
 var cs2 = [cc1,cc2,cc3,cc4] as [NSLayoutConstraint]
 
 NSLayoutConstraint.activateConstraints(cs1)
-
-
 viewOut.layoutIfNeeded()
+viewIn.layoutIfNeeded()
 viewOut
 
 NSLayoutConstraint.deactivateConstraints(cs1)
 NSLayoutConstraint.activateConstraints(cs2)
-//viewOut.layoutIfNeeded()
+viewOut.layoutIfNeeded()
+viewIn.layoutIfNeeded()
 viewOut
 
-
+//: Debug info
 
 var constraint1 = viewOut.heightAnchor.constraintEqualToAnchor(viewIn.heightAnchor)
 XCPCaptureValue("constrain", value: constraint1.description)
-constraint1.description
+print(constraint1.description)
 constraint1.identifier = "c1"
 XCPCaptureValue("constrain", value: constraint1.description)
-constraint1.description
+print(constraint1.description)
 viewIn.accessibilityIdentifier = "viewIn"
 XCPCaptureValue("constrain", value: constraint1.description)
-constraint1.description
+print(constraint1.description)
 viewOut.accessibilityIdentifier = "viewOut"
 XCPCaptureValue("constrain", value: constraint1.description)
-constraint1.description
+print(constraint1.description)
 
 //: [Next](@next)

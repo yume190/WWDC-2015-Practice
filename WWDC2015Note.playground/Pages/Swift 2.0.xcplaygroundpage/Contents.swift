@@ -107,21 +107,12 @@ dreamStart(1)
 dreamStart(404)
 dreamStart(666)
 
-// try! 會停止傳播 error，但是，如果真的發生 error 你會拿到 runtime error
+//: try! 會停止傳播 error，但是，如果真的發生 error 你會拿到 runtime error
 try! dreamBlackHole(false)
 //try! dreamBlackHole()
 
-//func dreamBlackHole2() throws{
-//    try! dreamBlackHole()
-//}
-//do {
-//    // 用 try 呼叫可能會發生 error 的 func
-//    try dreamBlackHole2()
-//} catch let error {
-//    print(error)
-//}
-//dreamBlackHole2()
 
+//: defer
 
 func gotoBed(hasBlackHole:Bool = true){
     defer {
@@ -136,15 +127,5 @@ func gotoBed(hasBlackHole:Bool = true){
 
 gotoBed(false)
 gotoBed()
-
-
-
-
-
-
-
-
-
-
 
 //: [Previous](@previous) | [Next](@next)
