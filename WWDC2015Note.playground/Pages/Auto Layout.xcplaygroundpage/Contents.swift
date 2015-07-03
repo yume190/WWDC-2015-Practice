@@ -55,6 +55,8 @@ viewOut.layoutIfNeeded()
 viewIn.layoutIfNeeded()
 viewOut
 
+print(viewOut.valueForKey("autolayoutTrace"))
+
 //: Debug info
 
 var constraint1 = viewOut.heightAnchor.constraintEqualToAnchor(viewIn.heightAnchor)
