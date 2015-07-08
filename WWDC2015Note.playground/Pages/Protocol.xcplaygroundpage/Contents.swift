@@ -10,6 +10,8 @@ protocol Formattable {
     func formattedContent() -> String
     
     func mF() -> String
+    
+//    func debugFormattedContent() -> String
 }
 
 extension Formattable {
