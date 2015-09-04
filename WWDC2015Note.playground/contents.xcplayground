@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' requires-full-environment='true' display-mode='rendered'>
+<playground version='6.0' target-platform='ios' requires-full-environment='true' display-mode='raw'>
     <pages>
-        <page name='Auto Layout'/>
+        <page name='AutoLayout'/>
+        <page name='AutoLayoutDebug'/>
         <page name='Playground'/>
         <page name='Protocol'/>
         <page name='Value Type'/>
         <page name='Swift 2.0'/>
+        <page name='UIStackView'/>
+        <page name='--------------'/>
+        <page name='ThemeManger'/>
+        <page name='ANI'/>
+        <page name='CustomView'/>
+        <page name='XCode6 Beta7'/>
+        <page name='--------------2'/>
+        <page name='Untitled Page 2'/>
+        <page name='Core Animation Adv Tec'/>
     </pages>
 </playground>

@@ -92,7 +92,7 @@ func dreaming(code:Int) throws {
         try dreamBlackHole()
     }
     
-    throw NSCocoaError.CoderReadCorruptError
+//    throw NSCocoaError.CoderReadCorruptError
 }
 
 func dreamBlackHole(hasBlackHole:Bool = true) throws {
