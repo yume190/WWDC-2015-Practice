@@ -14,7 +14,12 @@
         <page name='CustomView'/>
         <page name='XCode6 Beta7'/>
         <page name='--------------2'/>
-        <page name='Untitled Page 2'/>
+        <page name='Protocol again'/>
         <page name='Core Animation Adv Tec'/>
+        <page name='String'/>
+        <page name='Monad'/>
+        <page name='Untitled Page'/>
+        <page name='Lazy And Getter'/>
+        <page name='Monad TT'/>
     </pages>
 </playground>

@@ -44,6 +44,7 @@ if #available(iOS 9.0, *) {
     print("------ Make Ambiguity Layout End ------\n")
     
 //: [constraint _autolayoutTrace];
+    print("trace --------------------------------------------------------------------")
     print(viewOut.valueForKey("autolayoutTrace"))
     
 //: View one axis at a time
@@ -54,15 +55,10 @@ if #available(iOS 9.0, *) {
     var horizontalContraints = viewOut.constraintsAffectingLayoutForAxis(UILayoutConstraintAxis.Horizontal)
     for constraint in horizontalContraints {
         print(constraint.description)
+        print(constraint)
     }
     
 }
-
-
-
-
-
-
 
 /*:
 ###Ambiguity
@@ -84,6 +80,7 @@ Debug > View Debugging > Show Alignment Rectangles
 
 
 
+// viewOut.autolayoutTrace
 //: Engine recomputes the layout
 //:
 //: Engine variables receive new values

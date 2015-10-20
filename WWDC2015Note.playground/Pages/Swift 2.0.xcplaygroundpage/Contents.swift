@@ -17,8 +17,9 @@ struct YumeStyle:OptionSetType {
     static let Happy    = YumeStyle(rawValue: 1 << 2)
     static let Unhappy  = YumeStyle(rawValue: 1 << 3)
 }
+
 // Usage
-var dreamOptions:[YumeStyle] = [.Long,.Happy]
+var dreamOptions:YumeStyle = [.Long,.Happy]
 if dreamOptions.contains(.Happy) {
     print("happy")
 }

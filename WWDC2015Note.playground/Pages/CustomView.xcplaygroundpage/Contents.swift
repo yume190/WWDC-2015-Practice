@@ -1,47 +1,47 @@
 import UIKit
 
-//struct AAAA {
-//    var a:String = "1"
-//    var b:String = "2"
-//}
-//
-//class FirstCV :CustomDataView<AAAA> {
-//    var l1:UILabel!
-//    var l2:UILabel!
-//
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
+struct AAAA {
+    var a:String = "1"
+    var b:String = "2"
+}
+
+class FirstCV :CustomDataView<AAAA> {
+    var l1:UILabel!
+    var l2:UILabel!
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    override func setup() {
+        super.setup()
+        
+        l1 = UILabel(frame: CGRectMake(0, 0, 100, 50))
+        l1.backgroundColor = UIColor.purpleColor()
+        l1.text = "xxx"
+        self.view?.addSubview(l1)
+        
+        l2 = UILabel(frame: CGRectMake(0, 50, 100, 50))
+        l2.backgroundColor = UIColor.yellowColor()
+        l2.text = "yyy"
+        self.view?.addSubview(l2)
+    }
+    
+//    override func binding(data: AAAA) {
+//        l1.text = data.a
+//        l2.text = data.b
 //    }
-//    
-//    override func setup() {
-//        super.setup()
-//        
-//        l1 = UILabel(frame: CGRectMake(0, 0, 100, 50))
-//        l1.backgroundColor = UIColor.purpleColor()
-//        l1.text = "xxx"
-//        self.view?.addSubview(l1)
-//        
-//        l2 = UILabel(frame: CGRectMake(0, 50, 100, 50))
-//        l2.backgroundColor = UIColor.yellowColor()
-//        l2.text = "yyy"
-//        self.view?.addSubview(l2)
-//    }
-//    
-////    override func binding(data: AAAA) {
-////        l1.text = data.a
-////        l2.text = data.b
-////    }
-//    
-//    override func binding(data: DataType) {
-//        
-//    }
-//    
-//}
-//
-//var fcv = FirstCV(frame: CGRectMake(0, 0, 100, 100))
-//
-//fcv.data// = AAAA()
-//fcv
+    
+    override func binding(data: AAAA) {
+        
+    }
+    
+}
+
+var fcv = FirstCV(frame: CGRectMake(0, 0, 100, 100))
+
+fcv.data// = AAAA()
+fcv
 
 
 @objc protocol AAProtocol {

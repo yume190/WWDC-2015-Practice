@@ -233,3 +233,8 @@ public class AutoLayoutUtil {
 }
 
 
+extension Array where Element:UIView {
+    func centerX() -> [NSLayoutConstraint] {
+        return []
+    }
+}

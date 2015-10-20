@@ -404,6 +404,22 @@ basicAnimation.keyPath = "backgroundColor"
 basicAnimation.toValue = UIColor.blueColor().CGColor
 basicAnimation.delegate = view
 
+
+/*  ●○
+    fromValue       F   絕對值
+    byValue         B   相對值
+    toValue         T   絕對值
+    currentValue    C   絕對值
+
+    C   F   B   T   C
+        ●-------●
+        ●---●
+            ●---●
+        ●-----------●
+    ●-----------●
+    ●-------●
+ */
+
 view.layer.addAnimation(basicAnimation, forKey: nil)
 CATransaction.begin()
 // 這時會同時執行顯式動畫以及隱式動畫，所以先將隱式動畫關閉
@@ -468,3 +484,48 @@ animationGroup.animations = [basicAnimation,keyframeAnimation]
 // 但是會被儲存在內存，直到layer被回收。
 
 // Layer Time
+var layerTime = CABasicAnimation()
+layerTime.duration = 2
+layerTime.repeatCount = 3.5
+// 作用時間 2 * 3.5 = 7 秒
+// 預設 0.25 秒 一次
+
+// 其他方式設定 repeat
+layerTime.autoreverses = true
+layerTime.duration = 2.0
+layerTime.repeatDuration = Double.infinity
+
+// 相對時間
+layerTime.beginTime = 1.0 // 延遲時間
+layerTime.speed = 2.0 // duration 4 / speed 2 = 實際執行 2 秒
+layerTime.timeOffset = 2.0 // 從動畫第二秒開始
+// TODO: beginTime timeOffset 跟 beginTime 關係
+
+// fillMode
+//     kCAFillModeForwards
+//     kCAFillModeBackwards
+//     kCAFillModeBoth
+//     kCAFillModeRemoved   預設
+
+// Easing
+var easing = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+layerTime.timingFunction = easing
+CATransaction.setAnimationTimingFunction(easing)
+
+//kCAMediaTimingFunctionLinear
+//kCAMediaTimingFunctionEaseIn
+//kCAMediaTimingFunctionEaseOut
+//kCAMediaTimingFunctionEaseInEaseOut
+//kCAMediaTimingFunctionDefault
+
+// UIView Easing
+//UIView.animateWithDuration(10.0, delay: 1.0, options:
+//    [UIViewAnimationOptions.CurveEaseInOut],
+//    animations: nil, completion: nil)
+
+
+keyframeAnimation.values
+keyframeAnimation.timingFunctions = [easing] // 必須比 values 數量少一
+
+// 自定義 easing，使用的是 三次貝斯曲線
+var customEasing = CAMediaTimingFunction(controlPoints: 1, 0, 0.75, 1)

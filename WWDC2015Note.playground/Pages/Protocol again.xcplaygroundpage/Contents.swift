@@ -1,16 +1,16 @@
 import Foundation
 
 protocol A {
-//    func a() -> String
+        //func a() -> String
 }
+
 extension A {
     func a() -> String {
         return "protocol"
     }
 }
 
-
-class AA:A{
+class AA : A {
     func a() -> String {
         return "AA"
     }
@@ -19,12 +19,5 @@ class AA:A{
 var a = AA()
 a.a()
 
-var b = a
+var b:A = a
 b.a()
-
-
-func T(a:A){
-    a.a()
-}
-
-T(b)
