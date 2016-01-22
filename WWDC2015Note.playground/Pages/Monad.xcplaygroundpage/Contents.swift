@@ -1,18 +1,4 @@
 import Foundation
-import UIKit
-
-//class KK:UIView {
-////    override func tag() -> Int {return 10}
-//    override var tag:Int {
-//        get {
-//            return 10
-//        }
-//    }
-//}
-//
-//
-//var kk = KK()
-
 
 public final class Box<T> {
     let value : T
@@ -21,18 +7,6 @@ public final class Box<T> {
         self.value = value
     }
 }
-
-//public final class Box2<T>
-//{
-//    let value1 : T
-//    let value2 : T
-//    
-//    public init(_ value1 : T, _ value2 : T ) {
-//        self.value1 = value1
-//        self.value2 = value2
-//    }
-//}
-
 
 func map <T,U>(box : Box<T>, f : T -> U) -> Box<U> {
     return Box(f(box.value))
@@ -114,7 +88,6 @@ let optionalInts:[[Int?]] = [[1], [2,nil],[3, nil], [4, nil, 5]]
 
 let intsss = optionalInts.flatMap { $0 }.flatMap { $0 }
 intsss
-
 
 
 

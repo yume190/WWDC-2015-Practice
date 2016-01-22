@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' requires-full-environment='true' display-mode='raw'>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
     <pages>
         <page name='AutoLayout'/>
         <page name='AutoLayoutDebug'/>
@@ -18,8 +18,19 @@
         <page name='Core Animation Adv Tec'/>
         <page name='String'/>
         <page name='Monad'/>
-        <page name='Untitled Page'/>
         <page name='Lazy And Getter'/>
         <page name='Monad TT'/>
+        <page name='?????'/>
+        <page name='Swift 2.1'/>
+        <page name='Map &amp; FlatMap'/>
+        <page name='Method swizzle'/>
+        <page name='Reflect'/>
+        <page name='Swift Defination'/>
+        <page name='Yume Monad'/>
+        <page name='Function Variable'/>
+        <page name='Specific Generic Extension '/>
+        <page name='datatypes a la carte'/>
+        <page name='LLVM'/>
+        <page name='Category Theory'/>
     </pages>
 </playground>
