@@ -32,7 +32,8 @@ if #available(iOS 9.0, *) {
     stack.layoutMarginsRelativeArrangement = true
     stack.translatesAutoresizingMaskIntoConstraints = false
     
-    XCPShowView("Stack", view: stack)
+//    XCPShowView("Stack", view: stack)
+    XCPlaygroundPage.currentPage.liveView = stack
     
     var label1 = UILabel(frame: CGRectMake(0,0,100,100))
     label1.text = "abc"

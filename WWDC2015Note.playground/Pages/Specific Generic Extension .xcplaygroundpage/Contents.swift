@@ -2,6 +2,7 @@ import UIKit
 
 // http://milen.me/writings/swift-generic-protocols/
 // http://austinzheng.com/2015/09/29/swift-generics-pt-2/
+// http://www.cimgf.com/2015/12/14/swift-type-constrained-extensions-express-yourself/
 
 extension Array where Element:UIView {
     func centerX() -> [NSLayoutConstraint] {
@@ -64,17 +65,7 @@ ab3.flatMap{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+ 1 + 1
 
 
 
@@ -84,18 +75,4 @@ ab3.flatMap{
 //let pass1 = ()
 //pass1.dynamicType
 //let pass2 = Void()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

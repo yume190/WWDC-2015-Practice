@@ -7,18 +7,23 @@ struct Person {
     }
 }
 
-//: # Category Theory
+/*: 
 
-//: Objects A B C D
-//: A:Int
-//: B:Double
-//: C:String
-//: D:Person
+### Category Theory
 
-//: Arrows f g h
-//: f:A -> B
-//: g:B -> C
-//: h:C -> D
+Objects A B C D
+
+ * A : Int
+ * B : Double
+ * C : String
+ * D : Person
+
+Arrows f g h
+ 
+ * f : A -> B
+ * g : B -> C
+ * h : C -> D
+ */
 
 func f(a:Int) -> Double {
     return Double(a + 1)
@@ -32,23 +37,23 @@ func h(c:String) -> Person {
     return Person(name: c)
 }
 
-// Identity Law
-// id_A • f = f = f • id_B
+//: ### Identity Law
+//: > id_A • f = f = f • id_B
+
 let input = 10
 let leftID = (IDENTITY • f)(input)
 let middleID = f(input)
 let rightID = (f • IDENTITY)(input)
 leftID == middleID && middleID == rightID && leftID == rightID
 
-// Associative Law
-// (f • g) • h = f • (g • h)
+//: ### Associative Law
+//: > (f • g) • h = f • (g • h)
 let leftCompose = (h • g) • f
 let rightCompose = h • (g • f)
 leftCompose(input).name
 rightCompose(input).name
 leftCompose(input).name == rightCompose(input).name
 
-// -------------------------------------------------------------------------------------------------------
 
 //: # Functor
 
@@ -75,25 +80,3 @@ dddd
 let Fid_A = Optional(IDENTITY(input))
 let id_FA = IDENTITY(Optional(input))
 Fid_A == id_FA
-
-
-
-
-
-
-
-
-var a:String? = "test"
-a?.characters.count
-a = nil
-a?.characters.count
-
-
-
-
-
-
-
-
-
-

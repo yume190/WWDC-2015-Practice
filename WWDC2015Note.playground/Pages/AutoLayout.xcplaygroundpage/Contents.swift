@@ -69,7 +69,7 @@ var layoutMarginsGuide: UILayoutGuide
 */
     viewOut.layoutMarginsGuide
     
-    XCPShowView("YUME", view: viewOut)
+    XCPlaygroundPage.currentPage.liveView = viewOut
 
     NSLayoutConstraint.activateConstraints(constraintGroup2)
     viewOut

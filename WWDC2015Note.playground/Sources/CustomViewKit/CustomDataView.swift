@@ -2,7 +2,7 @@ import UIKit
 
 
 public protocol CustomDataViewBinding {
-    typealias BindingType
+    associatedtype BindingType
     var data:BindingType? { get set }
     func binding(data:BindingType)
 }

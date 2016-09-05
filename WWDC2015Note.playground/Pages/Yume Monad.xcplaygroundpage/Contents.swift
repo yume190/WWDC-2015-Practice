@@ -5,9 +5,9 @@ public class K1<A> { public init() {} }
 //-- (<$>) ::  Functor f => (a -> b) -> f a -> f b
 
 public protocol Functor {
-    typealias A
-    typealias B
-    typealias FB = K1<B>
+    associatedtype A
+    associatedtype B
+    associatedtype FB = K1<B>
     func fmap(f: A -> B) -> FB
 }
 

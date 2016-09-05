@@ -66,6 +66,7 @@ reflectView.customMirror()
 
 
 
+
 // https://netguru.co/blog/reflection-swift
 struct Vector {
     
@@ -105,7 +106,6 @@ extension Vector: CustomPlaygroundQuickLookable {
 }
 
 Vector(start: (0, 0), end: (1, 1))
-
 
 
 

@@ -21,7 +21,7 @@ stack.addArrangedSubview(view3)
 stack.addArrangedSubview(view4)
 stack.addArrangedSubview(view5)
 
-XCPShowView("Yume", view: stack)
+XCPlaygroundPage.currentPage.liveView = stack
 
 stack.axis = UILayoutConstraintAxis.Horizontal
 stack.alignment = UIStackViewAlignment.Fill

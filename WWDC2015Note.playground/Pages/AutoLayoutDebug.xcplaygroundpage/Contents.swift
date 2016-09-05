@@ -32,7 +32,7 @@ if #available(iOS 9.0, *) {
         constraint.identifier = "ConstraintGroup1"
     }
     
-    XCPShowView("YUME", view: viewOut)
+    XCPlaygroundPage.currentPage.liveView = viewOut
 //: Ambiguity
     print(
         viewOut.hasAmbiguousLayout() ?
@@ -70,14 +70,7 @@ Debug > View Debugging > Show Alignment Rectangles
 `exerciseAmbiguityInLayout`
 */
 
-
-
 //: [Previous](@previous) | [Next](@next)
-
-
-
-
-
 
 
 // viewOut.autolayoutTrace
